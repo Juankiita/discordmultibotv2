@@ -24,6 +24,8 @@ const TOKEN = process.env.TOKEN;
 const PREFIX = "!";
 
 const rolesPermitidos = [
+  "Staff",
+  "Arbitro",
   "Capitan CS",
   "Capitan LOL",
   "Capitan VALO",
