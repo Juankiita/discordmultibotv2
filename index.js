@@ -1,5 +1,15 @@
 const { Client, GatewayIntentBits, Partials } = require("discord.js");
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3000;
 
+app.get("/", (req, res) => {
+  res.send("Bot activo!");
+});
+
+app.listen(PORT, () => {
+  console.log(`Servidor web escuchando en el puerto ${PORT}`);
+});
 const client = new Client({
   intents: [
     GatewayIntentBits.Guilds,
